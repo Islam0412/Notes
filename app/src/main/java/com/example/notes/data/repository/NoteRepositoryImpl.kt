@@ -1,18 +1,19 @@
 package com.example.notes.data.repository
+
+import Note
 import com.example.notes.data.local.NoteDao
 import com.example.notes.data.mapper.toEntity
 import com.example.notes.data.mapper.toNote
-import com.geektech.notes.domain.model.Note
 import com.example.notes.domain.repository.NoteRepository
+import javax.inject.Inject
 
-class NoteRepositoryImpl(
+class NoteRepositoryImpl @Inject constructor(
 
     private val noteDao: NoteDao
 
 ) : NoteRepository {
     override fun getAllNotes(): List<Note> {
-        return noteDao.getAllNotes().map {
-            it.toNote()
+        return noteDao.getAllNotes().map { it.toNote()
         }
     }
 
