@@ -1,4 +1,4 @@
-package com.example.notes.presentation.ui.fragments
+package com.example.notes.presentation.ui.fragments.create_note_note
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -15,7 +15,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class CreateNoteViewModel @Inject constructor(
+class CreateEditNoteViewModel @Inject constructor(
     private val createNoteUseCase: CreateNoteUseCase,
     private val updateNoteUseCase: UpdateNoteUseCase
 ) : ViewModel() {
