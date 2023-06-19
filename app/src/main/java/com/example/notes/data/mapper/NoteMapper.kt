@@ -1,6 +1,6 @@
 package com.example.notes.data.mapper
 
-import Note
+import com.example.notes.domain.model.Note
 import com.example.notes.data.model.NoteEntity
 
 
